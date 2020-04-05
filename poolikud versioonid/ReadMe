@@ -1,0 +1,20 @@
+All methods work with both POST and GET methods.
+
+
+
+get all categories: /categories OK
+
+add new category (returns id of new category): /categories/add?name=[NAME OF NEW CATEGORY] OK
+
+edit category name: /categories/edit/id=[GATEGORY ID]&newname=[NEW NAME] OK
+edit category name: /categories/edit/name=[GATEGORY NAME]&newname=[NEW NAME]
+
+delete gategory with all products in this category: /categories/delete?id=[GATEGORY ID] OK
+delete gategory with all products in this category: /categories/delete?name=[GATEGORY NAME] OK
+
+get all products in category: /categories/products?id=[GATEGORY ID] OK
+get all products in category: /categories/products?name=[GATEGORY NAME]
+
+add new product (returns id of new product): /products/add?name=[NAME OF NEW CATEGORY]&category_id=[ID OF CATEGORY] OK
+edit product name: /products/edit/?category_id=[ID OF CATEGORY]&product_id=[NEW PRODUCT NAME]&new_name=[NEW PRODUCT NAME] OK
+delete product: /categories/products/delete?category_id=[ID OF CATEGORY]&product_name=[NEW PRODUCT NAME] OK

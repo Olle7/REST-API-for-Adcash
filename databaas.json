@@ -1,0 +1,118 @@
+[
+    {
+        "id": 0,
+        "name": "tools",
+        "products": [
+            {
+                "id": 0,
+                "name": "broom"
+            },
+            {
+                "id": 1,
+                "name": "hammer"
+            },
+            {
+                "id": 3,
+                "name": "screwdriver"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "computer devices",
+        "products": [
+            {
+                "id": 2,
+                "name": "computer mouse"
+            },
+            {
+                "id": 5,
+                "name": "screen"
+            },
+            {
+                "id": 4,
+                "name": "keyboard"
+            },
+            {
+                "id": 0,
+                "name": "camera"
+            },
+            {
+                "id": 1,
+                "name": "microfon"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "furniture",
+        "products": [
+            {
+                "id": 0,
+                "name": "cupboard"
+            },
+            {
+                "id": 3,
+                "name": "chair"
+            },
+            {
+                "id": 10,
+                "name": "desk"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "materials",
+        "products": [
+            {
+                "id": -1,
+                "name": "stone"
+            },
+            {
+                "id": 0,
+                "name": "wood"
+            },
+            {
+                "id": 1,
+                "name": "glas"
+            },
+            {
+                "id": 2,
+                "name": "steel"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "drinks",
+        "products": [
+            {
+                "id": 0,
+                "name": "water"
+            },
+            {
+                "id": 1,
+                "name": "milk"
+            },
+            {
+                "id": 2,
+                "name": "juice"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "veichels",
+        "products": [
+            {
+                "id": 0,
+                "name": "car"
+            },
+            {
+                "id": 1,
+                "name": "truck"
+            }
+        ]
+    }
+]

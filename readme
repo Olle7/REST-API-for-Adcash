@@ -1,0 +1,24 @@
+All methods work with both POST and GET methods.
+
+test view: /
+
+get all categories: /json
+add new category (returns id of new category): /json/new?name=[NAME OF NEW CATEGORY]
+edit category name: /json/[CATEGORY ID]?name=[NEW NAME]
+delete gategory with all products in this category: /json/[CATEGORY ID]?name=
+get all products in category: /json/[CATEGORY ID]
+add new product (returns id of new product): /json/[CATEGORY ID]/new?name=[PRODUCT NAME]
+edit product name: /json/[CATEGORY ID]/[PRODUCT ID]?name=[NEW NAME]
+delete product: /json/[CATEGORY ID]/[PRODUCT ID]?product_name=
+
+
+
+
+example:
+adding new category veiches: add new category (returns id of new category): /json/new?name=veichels
+checing that categorie has been added: /json
+adding new product into categorie: /json/[CATEGORY ID]/new?name=car
+adding new product into categorie: /json/[CATEGORY ID]/new?name=truc
+checing that product has been added into categorie: /json/[CATEGORY ID]
+editing product name /json/[CATEGORY ID]/[PRODUCT ID]?name=truck
+checing that product name has been edited: /json/[CATEGORY ID]

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GUI</title>
+</head>
+<body>
+
+ <a href="/json"  style="border:solid">all categories</a><br>
+
+ <div style="border:solid">
+    <script>
+        function add_category(){
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST","/json/new", true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("name="+document.getElementById("category_name").value);
+        }
+    </script>
+     <p>add new category</p>
+     <label for="category_name">category name:</label>
+     <input type="text" id="category_name"/>
+     <button onclick="add_category()">Add category</button>
+</div>
+
+
+ <div style="border:solid">
+    <script>
+        function edit_category(){
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST","/json/"+document.getElementById("category_id").value, true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("name="+document.getElementById("new_category_name").value);
+        }
+    </script>
+     <p>edit category</p>
+     <label for="category_id">Category id:</label>
+     <input type="text" id="category_id"/>
+     <label for="new_category_name">New name:</label>
+     <input type="text" id="new_category_name"/>
+     <button onclick="edit_category()">Edit category</button>
+</div>
+
+
+<div style="border:solid">
+    <script>
+        function delete_category(){
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST","/json/"+document.getElementById("category_to_delete_id").value, true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("name=");
+        }
+    </script>
+     <p>Delete category</p>
+     <label for="category_to_delete_id">Category id:</label>
+     <input type="text" id="category_to_delete_id"/>
+     <button onclick="delete_category()">Delete category</button>
+</div>
+
+
+<div style="border:solid">
+    <script>
+        function see_category(){
+            window.location = "/json/"+document.getElementById("category_to_see_id").value;
+        }
+    </script>
+     <p>Get products in category</p>
+     <label for="category_to_see_id">Category id:</label>
+     <input type="text" id="category_to_see_id"/>
+     <button onclick="see_category()">get products in this gategory</button>
+</div>
+
+
+ <div style="border:solid">
+    <script>
+        function add_product(){
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST","/json/"+document.getElementById("products_category_id").value+"/new", true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("name="+document.getElementById("product_name").value);
+        }
+    </script>
+     <p>Add new product</p>
+     <label for="products_category_id">Category id:</label>
+     <input type="text" id="products_category_id"/>
+     <label for="product_name">Name:</label>
+     <input type="text" id="product_name"/>
+     <button onclick="add_product()">Add product</button>
+</div>
+
+
+ <div style="border:solid">
+    <script>
+        function edit_product(){
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST","/json/"+document.getElementById("edited_products_category_id").value+"/"+document.getElementById("edited_product_id").value, true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("name="+document.getElementById("products_new_name").value);
+        }
+    </script>
+     <p>Edit product</p>
+     <label for="edited_products_category_id">Category id:</label>
+     <input type="text" id="edited_products_category_id"/>
+     <label for="edited_product_id">Product id:</label>
+     <input type="text" id="edited_product_id"/>
+     <label for="products_new_name">New name:</label>
+     <input type="text" id="products_new_name"/>
+     <button onclick="edit_product()">Edit product</button>
+</div>
+
+
+<div style="border:solid">
+    <script>
+        function delete_product(){
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST","/json/"+document.getElementById("edited_products_category_id").value+"/"+document.getElementById("edited_product_id").value, true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("name=");
+        }
+    </script>
+     <p>Delete product</p>
+     <label for="deleted_products_category_id">Category id:</label>
+     <input type="text" id="deleted_products_category_id"/>
+     <label for="deleted_product_id">Product id:</label>
+     <input type="text" id="deleted_product_id"/>
+     <button onclick="delete_product()">Edit product</button>
+</div>
+
+</body>
+</html>
