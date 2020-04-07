@@ -31,10 +31,24 @@ class Test_server(unittest.TestCase):
             if kategooriad[i]["name"]=="C1":
                 products_in_category=requests.get("http://127.0.0.1:5000/json/"+str(i), data={},headers={"Content-type": "application/x-www-form-urlencoded"})
         assert (products_in_category.json()==[])
-
-    def test_06delete_category(self):#deletes category "C1"
+    def test_06get_products_in_category(self):  #adds product to category "C1" and checks it is there.
         url = "http://127.0.0.1:5000/json"
         response_decoded_json = requests.get(url, data={},headers={"Content-type": "application/x-www-form-urlencoded"})
+        assert (response_decoded_json.status_code == 200)
+        kategooriad = response_decoded_json.json()
+        for i in range(len(kategooriad)):
+            if kategooriad[i]["name"] == "C1":
+                adding_response = requests.get("http://127.0.0.1:5000/json/"+str(i)+"/new", data={"name":"test_p1"},headers={"Content-type": "application/x-www-form-urlencoded"})#adds producy
+                products_in_category = requests.get("http://127.0.0.1:5000/json/" + str(i), data={},headers={"Content-type": "application/x-www-form-urlencoded"})
+        assert (adding_response.status_code==201)
+        for product in products_in_category.json():
+            if product["name"]=="test_p1":
+                return
+        raise Exception
+    def test_07delete_category(self):#deletes category "C1", and checks that it no longer exists after that.
+        url = "http://127.0.0.1:5000/json"
+        response_decoded_json = requests.get(url, data={},headers={"Content-type": "application/x-www-form-urlencoded"})
+        print(response_decoded_json.status_code)
         assert (response_decoded_json.status_code == 200)
         element_C1_olemas=False
         kategooriad=response_decoded_json.json()
