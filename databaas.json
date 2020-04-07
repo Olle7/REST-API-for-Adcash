@@ -1,5 +1,7 @@
 [
     {
+        "id": 0,
+        "name": "tools",
         "products": [
             {
                 "id": 0,
@@ -13,11 +15,11 @@
                 "id": 3,
                 "name": "screwdriver"
             }
-        ],
-        "id": 0,
-        "name": "tools"
+        ]
     },
     {
+        "id": 1,
+        "name": "computer devices",
         "products": [
             {
                 "id": 2,
@@ -39,11 +41,11 @@
                 "id": 1,
                 "name": "microfon"
             }
-        ],
-        "id": 1,
-        "name": "computer devices"
+        ]
     },
     {
+        "id": 5,
+        "name": "furniture",
         "products": [
             {
                 "id": 0,
@@ -57,11 +59,11 @@
                 "id": 10,
                 "name": "desk"
             }
-        ],
-        "id": 5,
-        "name": "furniture"
+        ]
     },
     {
+        "id": 2,
+        "name": "materials",
         "products": [
             {
                 "id": -1,
@@ -79,11 +81,11 @@
                 "id": 2,
                 "name": "steel"
             }
-        ],
-        "id": 2,
-        "name": "materials"
+        ]
     },
     {
+        "id": 3,
+        "name": "drinks",
         "products": [
             {
                 "id": 0,
@@ -97,11 +99,11 @@
                 "id": 2,
                 "name": "juice"
             }
-        ],
-        "id": 3,
-        "name": "drinks"
+        ]
     },
     {
+        "id": 4,
+        "name": "veichels",
         "products": [
             {
                 "id": 0,
@@ -111,8 +113,6 @@
                 "id": 1,
                 "name": "truck"
             }
-        ],
-        "id": 4,
-        "name": "veichels"
-    },
+        ]
+    }
 ]
