@@ -7,6 +7,7 @@ add new category (returns id of new category. if adding succesfuf returned http 
 edit category name: /json/[CATEGORY ID]?name=[NEW NAME]
 delete gategory with all products in this category: /json/[CATEGORY ID]?name=
 get all products in category: /json/[CATEGORY ID]
+get a product: /json/[CATEGORY ID]/[PRODUCT ID]
 add new product (returns id of new product.  if adding succesfuf returned http status is 201): /json/[CATEGORY ID]/new?name=[PRODUCT NAME]
 edit product name: /json/[CATEGORY ID]/[PRODUCT ID]?name=[NEW NAME]
 delete product: /json/[CATEGORY ID]/[PRODUCT ID]?product_name=

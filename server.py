@@ -97,6 +97,17 @@ def hello_world(category_id,product_id):
     f = open('databaas.json', 'r+')
     categories = json.load(f)
     f.seek(0)#resets file position to the beginning.
+    if len(request.values)==0:#get product name
+        try:
+            category_id = int(category_id)
+            product_id = int(product_id)
+        except ValueError:# id of category in request or product is not an integer
+            abort(400)
+        for category_index_in_database in range(len(categories)):
+            if categories[category_index_in_database]["id"] == category_id:
+                for product_index_in_database in range(len(categories[category_index_in_database]["products"])):
+                    if categories[category_index_in_database]["products"][product_index_in_database]["id"] == product_id:
+                        return app.response_class(response=json.dumps({"name":categories[category_index_in_database]["products"][product_index_in_database]["name"]}), mimetype='application/json')
     if product_id=="new" and "name" in request.values and len(request.values)==1:#adds new product.
         try:
             category_id=int(category_id)
@@ -115,7 +126,8 @@ def hello_world(category_id,product_id):
             category_id = int(category_id)
             product_id = int(product_id)
         except ValueError:
-            abort(400)# id of category or product is not an integer.
+            #app.response_class(response="id of category or product is not an integer.", mimetype='application/json', status=400)
+            abort(400)# id of category in request or product is not an integer.
         for category_index_in_database in range(len(categories)):
             if categories[category_index_in_database]["id"] == category_id:
                 for product_index_in_database in range(len(categories[category_index_in_database]["products"])):
