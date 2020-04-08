@@ -48,7 +48,6 @@ class Test_server(unittest.TestCase):
     def test_07delete_category(self):#deletes category "C1", and checks that it no longer exists after that.
         url = "http://127.0.0.1:5000/json"
         response_decoded_json = requests.get(url, data={},headers={"Content-type": "application/x-www-form-urlencoded"})
-        print(response_decoded_json.status_code)
         assert (response_decoded_json.status_code == 200)
         element_C1_olemas=False
         kategooriad=response_decoded_json.json()

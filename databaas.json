@@ -1,117 +1,117 @@
 [
     {
-        "id": 0,
         "name": "tools",
+        "id": 0,
         "products": [
             {
-                "id": 0,
-                "name": "broom"
+                "name": "broom",
+                "id": 0
             },
             {
-                "id": 1,
-                "name": "hammer"
+                "name": "hammer",
+                "id": 1
             },
             {
-                "id": 3,
-                "name": "screwdriver"
+                "name": "screwdriver",
+                "id": 3
             }
         ]
     },
     {
-        "id": 1,
         "name": "computer devices",
+        "id": 1,
         "products": [
             {
-                "id": 2,
-                "name": "computer mouse"
+                "name": "computer mouse",
+                "id": 2
             },
             {
-                "id": 5,
-                "name": "screen"
+                "name": "screen",
+                "id": 5
             },
             {
-                "id": 4,
-                "name": "keyboard"
+                "name": "keyboard",
+                "id": 4
             },
             {
-                "id": 0,
-                "name": "camera"
+                "name": "camera",
+                "id": 0
             },
             {
-                "id": 1,
-                "name": "microfon"
+                "name": "microfon",
+                "id": 1
             }
         ]
     },
     {
-        "id": 5,
         "name": "furniture",
+        "id": 5,
         "products": [
             {
-                "id": 0,
-                "name": "cupboard"
+                "name": "cupboard",
+                "id": 0
             },
             {
-                "id": 3,
-                "name": "chair"
+                "name": "chair",
+                "id": 3
             },
             {
-                "id": 10,
-                "name": "desk"
+                "name": "desk",
+                "id": 10
             }
         ]
     },
     {
-        "id": 2,
         "name": "materials",
+        "id": 2,
         "products": [
             {
-                "id": -1,
-                "name": "stone"
+                "name": "stone",
+                "id": -1
             },
             {
-                "id": 0,
-                "name": "wood"
+                "name": "wood",
+                "id": 0
             },
             {
-                "id": 1,
-                "name": "glas"
+                "name": "glas",
+                "id": 1
             },
             {
-                "id": 2,
-                "name": "steel"
+                "name": "steel",
+                "id": 2
             }
         ]
     },
     {
-        "id": 3,
         "name": "drinks",
+        "id": 3,
         "products": [
             {
-                "id": 0,
-                "name": "water"
+                "name": "water",
+                "id": 0
             },
             {
-                "id": 1,
-                "name": "milk"
+                "name": "milk",
+                "id": 1
             },
             {
-                "id": 2,
-                "name": "juice"
+                "name": "juice",
+                "id": 2
             }
         ]
     },
     {
-        "id": 4,
         "name": "veichels",
+        "id": 4,
         "products": [
             {
-                "id": 0,
-                "name": "car"
+                "name": "car",
+                "id": 0
             },
             {
-                "id": 1,
-                "name": "truck"
+                "name": "truck",
+                "id": 1
             }
         ]
     }
